@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<form class="frm" action="" method="post" class="bg-light p-3 mt-5 mb-5 rounded sing" style="width: 450px;">
+    {% csrf_token %}
+    <h2 class="signup text-center">SIGN UP</h2>
+    <div class="mb-3">
+        <label for="fname" class="form-label">First Name</label>
+        <input type="text" class="form-control" id="fname" placeholder="First Name" name="fname">
+    </div>
+    <div class="mb-3">
+        <label for="lname" class="form-label">Last Name</label>
+        <input type="text" class="form-control" id="lname" placeholder="Last Name" name="lname">
+    </div>
+    <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" placeholder="Email" name="email">
+    </div>
+    <div class="mb-3">
+        <label for="username" class="form-label">Username</label>
+        <input type="text" class="form-control" id="username" placeholder="Username" name="username">
+    </div>
+    <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password" placeholder="Password" name="password">
+    </div>
+    <div class="mb-3">
+        <label for="cpassword" class="form-label">Confirm Password</label>
+        <input type="password" class="form-control" id="cpassword" placeholder="Confirm Password" name="cpassword">
+    </div>
+    <div>
+        <button type="submit" class="btn btn-success" style="margin-left: 160px;">Submit</button>
+    </div>
+</form>
+
+{% endblock %}

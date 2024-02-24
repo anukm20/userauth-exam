@@ -1,0 +1,15 @@
+{% load static %}
+<nav class="navbar bg-light">
+    <div class="container-fluid">
+      <a href="{% url 'car:home' %}" class="navbar-brand">Home</a>
+      <form class="d-flex" role="search">
+        {% if user.is_authenticated %}
+        <span class="us me-1">{{user}}</span>
+        <a href="{% url 'auth:logout' %}" class="lgot me-2 btn btn-danger">logout</a>
+        {% else %}
+        <a href="{% url 'auth:register' %}" class="snin me-2 btn btn-dark">sign in</a>
+        <a href="{% url 'auth:login' %}" class="lgin btn btn-dark">login</a>
+        {% endif %}
+      </form>
+    </div>
+  </nav>
